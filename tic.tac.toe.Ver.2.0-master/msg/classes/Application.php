@@ -46,7 +46,7 @@ class Application
         $dbh = Application::DB_connect();
         $sth = $dbh->prepare("SELECT who, who_fract, who_turn, opponent, block, value FROM game WHERE who =:who AND opponent =:opponent");
         $sth->execute(array( ':who' => $who, ':opponent' => $opponent));
-        return $sth->rowCount();
+        return $sth->rowCount();//com
     }
     public function Game_start_insert($who,$who_fract,$who_turn,$opponent){
         $dbh = Application::DB_connect();
